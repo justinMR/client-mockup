@@ -1,0 +1,19 @@
+input.search {
+  -webkit-box-shadow: 0 2px 4px 0 rgba(75, 75, 75, 0.5) !important;
+          box-shadow: 0 2px 4px 0 rgba(75, 75, 75, 0.5) !important;
+}
+
+input.search:focus {
+  outline: none;
+  border: 0;
+}
+
+.nav-pills .nav-link {
+  color: inherit;
+}
+
+.nav-pills .nav-link.active {
+  background-color: transparent;
+  color: inherit;
+  border-bottom: 3px solid #334659;
+}

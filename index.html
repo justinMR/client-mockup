@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light sticky-top mt-4 mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/bootstrap-logo.svg" alt="" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                Bootstrap
+            </a>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                Send Feedback
+            </button>
+        </div>
+    </nav>
+    <!-- search -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="mb-5">
+                    <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+                        <li class="nav-item px-3" role="presentation">
+                            <button class="nav-link rounded-0 px-0 pb-1 active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Home</button>
+                        </li>
+                        <li class="nav-item px-3" role="presentation">
+                            <button class="nav-link rounded-0 px-0 pb-1" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Profile</button>
+                        </li>
+                        <li class="nav-item px-3" role="presentation">
+                            <button class="nav-link rounded-0 px-0 pb-1" id="pills-contact-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                aria-selected="false">Contact</button>
+                        </li>
+                        <li class="nav-item px-3" role="presentation">
+                            <button class="nav-link rounded-0 px-0 pb-1" id="pills-fourth-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-fourth" type="button" role="tab" aria-controls="pills-fourth"
+                                aria-selected="false">Fourth</button>
+                        </li>
+                    </ul>
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3 rounded-pill search shadow-none border-0" placeholder="Search"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-5">
+            <!-- Person card/row -->
+            <div class="col-md-12 col-lg-12">
+                <div class="d-flex mb-3 justify-content-end">
+                    <a href="#">Collapse All</a>
+                    <span class="mx-2">|</span>
+                    <a href="#">Expand all</a>
+                </div>
+                <div class="card p-3">
+                    <div class="row">
+                        <!-- left side of card -->
+                        <div class="col-md-4">
+                            <div class="card mb-3 border-0">
+                                <div class="row g-0">
+                                    <div class="col-md-3">
+                                        <img src="https://via.placeholder.com/100" alt="person name" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body pt-0">
+                                            <h5 class="card-title">Person name</h5>
+                                            <p class="card-text mb-0">Person status</p>
+                                            <p class="card-text mb-0">Person position/title</p>
+                                            <p class="card-text mb-0"><small><i class="bi bi-geo-alt-fill"></i>
+                                                    State</small></p>
+                                            <p class="card-text mb-0"><small><i class="bi bi-telephone-fill"></i> <a
+                                                        href="tel:111-2222-333">111-222-3333</a></small></p>
+                                            <p class="card-text mb-0"><small><i class="bi bi-envelope-fill"></i> <a
+                                                        href="mailto: something@email.com">something@email.com</a></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right side of card -->
+                        <div class="col-md-8">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam voluptate sunt
+                                voluptatem dolores recusandae alias debitis vitae quo dolorum. Ut quia qui voluptate.
+                                Provident reprehenderit qui ipsam blanditiis tempore deleniti ea quos sequi quae.
+                                Aspernatur itaque nobis architecto excepturi enim officia expedita. Ad dolorem ea
+                                deleniti, id suscipit soluta?</p>
+                        </div>
+                    </div>
+                    <!-- collapse view more ||less -->
+                    <div class="row">
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button class="mt-auto btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                View more/less
+                            </button>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="collapse" id="collapseExample">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h6>Why person is an expert
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-white d-flex align-items-center justify-content-between">
+                                                <h6 class="card-title mb-0">Card title</h6>
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                            <div class="card-body p-0 pl-1">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-white d-flex align-items-center justify-content-between">
+                                                <h6 class="card-title mb-0">Card title</h6>
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                            <div class="card-body p-0 pl-1">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-white d-flex align-items-center justify-content-between">
+                                                <h6 class="card-title mb-0">Card title</h6>
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                            <div class="card-body p-0 pl-1">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Person card/row -->
+            <div class="col-md-12 col-lg-12">
+                <div class="card p-3">
+                    <div class="row">
+                        <!-- left side of card -->
+                        <div class="col-md-4">
+                            <div class="card mb-3 border-0">
+                                <div class="row g-0">
+                                    <div class="col-md-3">
+                                        <img src="https://via.placeholder.com/100" alt="person name" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body pt-0">
+                                            <h5 class="card-title">Person name</h5>
+                                            <p class="card-text mb-0">Person status</p>
+                                            <p class="card-text mb-0">Person position/title</p>
+                                            <p class="card-text mb-0"><small><i class="bi bi-geo-alt-fill"></i>
+                                                    State</small></p>
+                                            <p class="card-text mb-0"><small><i class="bi bi-telephone-fill"></i> <a
+                                                        href="tel:111-2222-333">111-222-3333</a></small></p>
+                                            <p class="card-text mb-0"><small><i class="bi bi-envelope-fill"></i> <a
+                                                        href="mailto: something@email.com">something@email.com</a></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right side of card -->
+                        <div class="col-md-8">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam voluptate sunt
+                                voluptatem dolores recusandae alias debitis vitae quo dolorum. Ut quia qui voluptate.
+                                Provident reprehenderit qui ipsam blanditiis tempore deleniti ea quos sequi quae.
+                                Aspernatur itaque nobis architecto excepturi enim officia expedita. Ad dolorem ea
+                                deleniti, id suscipit soluta?</p>
+                        </div>
+                    </div>
+                    <!-- collapse view more ||less -->
+                    <div class="row">
+                        <div class="col-md-4 d-flex align-items-end">
+                            <button class="mt-auto btn btn-primary" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                View more/less
+                            </button>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="collapse" id="collapseExample">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h6>Why person is an expert
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                <i class="bi bi-arrows-angle-expand"></i>
+                                            </button>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-white d-flex align-items-center justify-content-between">
+                                                <h6 class="card-title mb-0">Card title</h6>
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                            <div class="card-body p-0 pl-1">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-white d-flex align-items-center justify-content-between">
+                                                <h6 class="card-title mb-0">Card title</h6>
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                            <div class="card-body p-0 pl-1">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div
+                                                class="card-header bg-white d-flex align-items-center justify-content-between">
+                                                <h6 class="card-title mb-0">Card title</h6>
+                                                <i class="bi bi-info-circle"></i>
+                                            </div>
+                                            <div class="card-body p-0 pl-1">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                    <li class="list-group-item border-0">item x</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <!-- feedback modal -->
+        <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Let us know how we can improve this platform.</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text border-o bg-white" id="basic-addon1">Receipients</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text border-o bg-white" id="basic-addon1">Subject</span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+                    </div>
+                    <div class="modal-footer justify-content-start border-0">
+                        <button class="btn btn-primary">Send</button>
+                        <i class="fas fa-font"></i>
+                        <i class="fas fa-paperclip"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- person detail modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <!-- Person modal header -->
+                        <div class="card mb-3 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <img src="https://via.placeholder.com/100" alt="person name" class="img-fluid">
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title">Person name</h5>
+                                        <p class="card-text mb-0">Person status</p>
+                                        <p class="card-text mb-0">Person position/title</p>
+                                        <p class="card-text mb-0"><small><i class="bi bi-geo-alt-fill"></i>
+                                                State</small></p>
+                                        <p class="card-text mb-0"><small><i class="bi bi-telephone-fill"></i> <a
+                                                    href="tel:111-2222-333">111-222-3333</a></small></p>
+                                        <p class="card-text mb-0"><small><i class="bi bi-envelope-fill"></i> <a
+                                                    href="mailto: something@email.com">something@email.com</a></small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close mb-auto" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header bg-white d-flex align-items-center justify-content-between">
+                                        <h6 class="card-title mb-0">Card title</h6>
+                                        <i class="bi bi-info-circle"></i>
+                                    </div>
+                                    <div class="card-body p-0 pl-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item border-0">item Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Blanditiis mollitia laudantium
+                                                consectetur, temporibus ullam quam? Perspiciatis explicabo atque
+                                                officiis accusantium.</li>
+                                            <li class="list-group-item border-0">item Lorem ipsum dolor sit amet
+                                                consectetur, adipisicing elit. Neque dignissimos quo similique laborum
+                                                id laudantium, repudiandae aliquam hic officia vitae.</li>
+                                            <li class="list-group-item border-0">item Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Doloremque tempore sit, totam impedit
+                                                animi et sed aperiam autem provident harum eius eos ullam laudantium
+                                                alias at quo a culpa ratione commodi. Quo accusantium magnam temporibus
+                                                dolores! Saepe fugiat quasi praesentium?</li>
+                                            <li class="list-group-item border-0">item Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit. Velit dignissimos omnis accusantium fugiat
+                                                voluptas doloremque quisquam deleniti hic natus expedita. Harum nostrum
+                                                pariatur excepturi animi ipsum voluptatem deleniti nemo molestiae?</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header bg-white d-flex align-items-center justify-content-between">
+                                        <h6 class="card-title mb-0">Card title</h6>
+                                        <i class="bi bi-info-circle"></i>
+                                    </div>
+                                    <div class="card-body p-0 pl-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item border-0">item x</li>
+                                            <li class="list-group-item border-0">item x</li>
+                                            <li class="list-group-item border-0">item x</li>
+                                            <li class="list-group-item border-0">item x</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header bg-white d-flex align-items-center justify-content-between">
+                                        <h6 class="card-title mb-0">Card title</h6>
+                                        <i class="bi bi-info-circle"></i>
+                                    </div>
+                                    <div class="card-body p-0 pl-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item border-0">item x</li>
+                                            <li class="list-group-item border-0">item x</li>
+                                            <li class="list-group-item border-0">item x</li>
+                                            <li class="list-group-item border-0">item x</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

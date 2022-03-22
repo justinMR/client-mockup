@@ -1,0 +1,20 @@
+// search
+input.search {
+    box-shadow: 0 2px 4px 0 rgba(75,75,75,0.5) !important;
+
+    &:focus {
+        outline: none;
+        border: 0;
+    }
+}
+
+// nav pills for search
+.nav-pills .nav-link {
+    color: inherit;
+
+    &.active {
+        background-color: transparent;
+        color: inherit;
+        border-bottom: 3px solid $gps-black;
+    }
+}
